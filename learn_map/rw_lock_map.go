@@ -11,14 +11,14 @@ type RWLockMap struct {
 	sync.RWMutex
 }
 
-// NewRWLockMap 创建并返回一个新的 RWLockMap 实例。
+// NewRWLockMap 创建并返回一个新的 RWLockMap 实例
 func NewRWLockMap() *RWLockMap {
 	return &RWLockMap{
 		rwMap: make(map[string]any),
 	}
 }
 
-// Put 方法用于将一个键值对添加到 RWLockMap 中。
+// Put 将一个键值对添加到 RWLockMap 中
 //
 // 参数:
 //
@@ -30,7 +30,7 @@ func (rw *RWLockMap) Put(key string, value any) {
 	rw.rwMap[key] = value
 }
 
-// Get 方法用于获取与给定键关联的值。
+// Get 根据key获取val
 //
 // 参数:
 //
